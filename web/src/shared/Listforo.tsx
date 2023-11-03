@@ -44,7 +44,7 @@ const Listforo = () => {
                 color: "white",
                 border: "none",
                 cursor: "pointer",
-                
+                transition: "0.3s ease all"    
               }}
             >
               descargar

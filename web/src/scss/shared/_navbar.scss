@@ -26,6 +26,10 @@
       text-decoration: none;
       color: #fff;
       border-radius: 3px;
+      transition: 0.3s ease all;
+      &:hover {
+        background: #7e6ac7;
+      }
     }
 
     &__icon-hamburger {

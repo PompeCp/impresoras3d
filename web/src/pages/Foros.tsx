@@ -7,13 +7,13 @@ import { addForos } from "../servicios/index";
 const Foros = () => {
   const [file, setFile] = useState(null);
   const selectedHandler = (e: any) => {
-    console.log(e.target.files[0]);
+    //console.log(e.target.files[0]);
     setFile(e.target.files[0]);
   };
 
   const [file2, setFile2] = useState(null);
   const selectedHandler2 = (e: any) => {
-    console.log(e.target.files[0]);
+    //console.log(e.target.files[0]);
     setFile2(e.target.files[0]);
   };
 
@@ -46,15 +46,14 @@ const Foros = () => {
     updatedForm.link = nombreStl; // Asigna el valor de nombreimg al campo "link"
     setForm(updatedForm); // Actualiza el estado del formulario con los nuevos valores
 
-    console.log(nombreimg);
-    console.log(nombreStl);
+    //console.log(nombreimg);
+    //console.log(nombreStl);
 
     // Envía solo la imagen utilizando FormData
     const formData = new FormData();
 
-    formData.append('archivo', file); 
-    formData.append('archivo', file2);
-
+    formData.append("archivo", file);
+    formData.append("archivo", file2);
 
     fetch("http://localhost:4000/comunidad/images/post", {
       method: "POST",
@@ -67,7 +66,6 @@ const Foros = () => {
       });
 
     document.getElementById("fileinput").value = null;
-    
   };
 
   const submit = async (event: any) => {
@@ -107,8 +105,9 @@ const Foros = () => {
           >
             <Contenido>
               <Formulario onSubmit={submit}>
+                <span>Nombre</span>
                 <input
-                  className="form-item"
+                  className="input-n"
                   type="text"
                   placeholder="Nombre"
                   name="nombre"
@@ -118,15 +117,24 @@ const Foros = () => {
                       event.target.value // le pasamos el valor
                     );
                   }}
-                  require autocomplete="off"/>
+                  require
+                  autocomplete="off"
+                />
+                <span>Imagen de figura</span>
                 <input
                   onChange={selectedHandler}
-                  className="form-item"
+                  className="input-file"
                   type="file"
                   name="imagenfile"
+                  id="imagenfile"
+                  accept="image/*"
                 />
+                <label htmlFor="imagenfile">
+                  <span>Seleccionar archivo</span>
+                </label>
+                <span>Descripcion</span>
                 <input
-                  className="form-item"
+                  className="input-n"
                   type="text"
                   name="descripcion"
                   id="fileinput"
@@ -136,15 +144,25 @@ const Foros = () => {
                       event.target.value // le pasamos el valor
                     );
                   }}
-                  placeholder="descripcion"
-                  require autocomplete="off"/>
+                  placeholder="Descripcion"
+                  require
+                  autocomplete="off"
+                />
+                <span>Sleeccionar modelo 3D</span>
                 <input
                   onChange={selectedHandler2}
-                  className="form-item"
+                  className="input-file"
                   type="file"
+                  id="linkfile"
                   name="linkfile"
+                  accept=".stl, .rar, .zip"
                 />
+                <label htmlFor="linkfile">
+                  <span>Seleccionar archivo</span>
+                </label>
+                <div >
                 <button onClick={sendHandler}>enviar</button>
+                </div>
               </Formulario>
             </Contenido>
           </Modal>
@@ -190,7 +208,8 @@ const Boton = styled.button`
 const Contenido = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin: 50px;
 
   h1 {
     font-size: 42px;
@@ -213,4 +232,73 @@ const Contenido = styled.div`
 const Formulario = styled.form`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  .input-n {
+    margin-top: 2px;
+    color: white;
+    margin-bottom: 8px;
+    ::placeholder {
+      color: #ffffff;
+      font-weight: bold;
+    }
+    background-color: #51408d;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #615392;
+  }
+  .input-n::placeholder {
+    color: white;
+  }
+
+  .input-n::-webkit-input-placeholder {
+    color: white;
+  }
+  .input-n::-moz-placeholder {
+    color: white;
+  }
+  .input-n:-ms-input-placeholder {
+    color: white;
+  }
+  .input-n:-moz-placeholder {
+    color: white;
+  }
+  .input-file {
+    display: none;
+  }
+  label {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    background-color: #51408d;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #615392;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    flex: 1;
+    &:hover {
+      background: #7e6ac7;
+    }
+  }
+  button {
+    
+    margin-top: 8px;
+    background-color: #7a63ce;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #615392;
+    cursor: pointer;
+    color:white;
+    transition: 0.3s ease all;
+    flex: 1;
+    &:hover {
+      background: #9b8ccf;
+    }
+  }
 `;
