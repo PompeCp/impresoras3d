@@ -1,0 +1,51 @@
+.container {
+  &__impresora2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    right: 180px;
+  }
+}
+@media (max-width: 1416px) {
+  .container {
+    &__impresora2 {
+      right: 10px;
+    }
+  }
+}
+@media (max-width: 1316px) {
+  .container {
+    &__impresora2 {
+      display: none;
+    }
+  }
+}
+.concepcon {
+  background-color: $secciones;
+  display: flex;
+  flex-direction: column;
+  
+  &__par {
+    gap: 80px;
+    color: white;
+    width: 60%;
+    margin: 45px;
+    align-content: center;
+  }
+  &__par2 {
+    gap: 80px;
+    color: white;
+    width: 80%;
+    margin: 45px;
+    align-content: center;
+  }
+
+  @media (max-width: 1316px) {
+    .concepcon {
+      &__par {
+        width: 100%;
+      }
+    }
+  }
+}

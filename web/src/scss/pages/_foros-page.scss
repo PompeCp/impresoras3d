@@ -1,0 +1,29 @@
+.containerforo{
+    background-color: $secciones;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    &__tablebg{
+        background-color: $secondary;
+        border-radius: 11px;
+        margin: 80px;
+        flex-direction: column;
+        tr{
+            margin:20px;
+        }
+
+        }
+   
+    &__di{
+        margin: 30px;
+        padding-left: 40px ;
+        flex-direction: column;
+        &__span{
+            background-color: $secondary;
+            border-radius: 7px;
+            
+        }
+    }
+}
+  

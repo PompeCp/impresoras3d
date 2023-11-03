@@ -1,0 +1,31 @@
+Content-Type   application/json--->header
+
+
+ruta consultar todos los usuarios
+localhost:3000/usuarios  ---> Get
+
+ruta crear usuarios especifico
+localhost:3000/usuario/:id -->Get
+
+ruta crear usuarios especifico
+localhost:3000/usuario -->post
+
+ruta eliminar usuarios especifico
+localhost:3000/usuario/:id -->delete
+
+ruta editar usuarios especifico
+localhost:3000/usuario/:id -->put
+
+{"nombre":"felipe", "email":"felipe@si.com", "telefono":"3202669126", "contrasena":"12345","id_rol":1}  --->para poder editar y crear
+
+
+/contactanos/
+
+/mv/
+/noticias/
+/precios/
+/proveedores/
+/redes/
+/ventas/
+/tipros/
+/rol/

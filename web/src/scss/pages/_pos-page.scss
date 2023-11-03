@@ -1,0 +1,48 @@
+.containerpos {
+  background-color: $secciones;
+  display: flex;
+  flex-direction: column;
+
+  &__par {
+    color: white;
+    margin: 50px;
+    width: 60%;
+  }
+}
+
+.containerpos2 {
+  background-color: $secciones;
+  display: flex;
+  flex-direction: column;
+
+  &__par {
+    align-items: center;
+    color: white;
+    width: 100%;
+  }
+  &__par2 {
+    align-items: center;
+    color: white;
+    width: 100%;
+  }
+}
+@media (max-width: 765px) {
+  .containerpos2 {
+    height: clamp(37.5rem, 80.7692rem + -86.5385vw, 65.625rem);
+  }
+}
+.herramienta {
+  &__img {
+    align-content: center;
+    width: 1864px;
+    height: auto;
+    flex-direction: column;
+    margin: 180px;
+    &__on {
+      align-content: center;
+      width: clamp(12.5rem, -4.7131rem + 98.3607vw, 87.5rem);
+      height: auto;
+      flex-direction: column;
+    }
+  }
+}

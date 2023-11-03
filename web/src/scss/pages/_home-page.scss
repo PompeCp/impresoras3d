@@ -1,0 +1,348 @@
+.container {
+  width: 100%;
+  height: 180px;
+  background: $contenedor;
+  position: relative;
+  display: flex;
+
+  &__flor {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__impresora {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+  }
+  &__title {
+    text-align: center;
+    font-size: 45px;
+    color: $secondary;
+    width: calc(100% - 375px);
+    z-index: 11;
+    margin-top: 30px;
+  }
+  &__filamento {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &__fil {
+    width: 100%;
+    height: 461px;
+    position: relative;
+    background-image: url("/images/filamentos_bn.png");
+    background-repeat: no-repeat;
+    background-size: clamp(81.25rem, -13.975rem + 117.2vw, 117.875rem);
+    &__text {
+      display: flex;
+      color: #fff;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      column-gap: clamp(3.125rem, 0rem + 100vw, 6.25rem);
+      margin-right: clamp(3.125rem, 0rem + 100vw, 6.25rem);
+      margin-left: clamp(3.125rem, 0rem + 100vw, 6.25rem);
+      padding-top: 80px;
+      font-size: clamp(0.3125rem, 0.1974rem + 0.6579vw, 0.9375rem);
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    &__fil {
+      &__text {
+        margin-left: 20px;
+        margin-right: 20px;
+        column-gap: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 560px) {
+  .container {
+    height: 706px;
+    background-size: 10000;
+    &__fil {
+      &__text {
+        padding-top: 40px;
+        align-items: normal;
+        row-gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.container-info {
+  width: calc(100% - 40px);
+  background: $secciones;
+  padding: 20px;
+  &__partes {
+    display: flex;
+    gap: 1em;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.625rem, -0.1705rem + 4.5455vw, 1.25rem);
+  }
+
+  &__description {
+    width: calc(100% - 400px);
+    color: #fff;
+  }
+  &__funciona {
+    display: flex;
+    margin-top: 4em;
+    color: #fff;
+
+    div {
+      &:last-child {
+        width: calc(100% - 520px);
+      }
+    }
+  }
+
+  &__sub {
+    width: 50%;
+    height: 100px;
+    background: $contenedor;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    right: 20px;
+    margin-top: 20px;
+
+    &__title {
+      text-align: center;
+      font-size: clamp(1rem, 0.584rem + 2.377vw, 2.8125rem);
+      color: $secondary;
+      width: calc(100%);
+      position: relative;
+      top: 25px;
+    }
+  }
+
+  &__impresoras {
+    margin-top: 2em;
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+
+    &__item {
+      width: 100%;
+      height: 650px;
+      background: $primary;
+      border-radius: 10px;
+      color: #fff;
+
+      &__content {
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+  &__foro {
+    margin-top: 2em;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 0.4fr);
+    gap: 1em;
+
+    &__item {
+      width: 100%;
+      height: 700px;
+      background: $primary;
+      border-radius: 10px;
+      color: #fff;
+
+      &__content {
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+          padding-top: 100px;
+        }
+
+        img {
+          object-fit: cover;
+          width: 372px;
+          height: 380px;
+        }
+      }
+    }
+  }
+
+  &__filamentos {
+    width: 100%;
+    height: 200px;
+    background: $contenedor;
+  }
+
+  &__tipo-impresora {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1661px) {
+  .container-info {
+    &__impresoras {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1121px) {
+  .container-info {
+    &__impresoras {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container-info {
+    &__tipo-impresora {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__1 {
+        width: 200px;
+        height: 200px;
+      }
+
+      &__2 {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 703px) {
+  .container-info {
+    &__impresoras {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 703px) {
+  .container-info {
+    &__foro {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+@media (max-width: 381px) {
+  .container-info {
+    &__impresoras {
+      &__item {
+        height:clamp(36.25rem, 32.7847rem + 19.802vw, 37.5rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 381px) {
+  .container-info {
+    &__impresoras {
+      &__item {
+        &__content {
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 381px) {
+    .container-info {
+      &__foro {
+        &__item {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 381px) {
+  .container-info {
+    &__foro {
+      &__item {
+        &__content {
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1315px) {
+  .container {
+    height: 180px;
+    &__impresora {
+      display: none;
+    }
+    &__filamento {
+      display: none;
+    }
+    &__title {
+      width: 100%;
+      font-size: clamp(1.875rem, 1.4951rem + 2.1708vw, 2.8125rem);
+    }
+    &__flor {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .container-info {
+    &__description {
+      margin-top: 1em;
+      width: calc(100%);
+    }
+    .como-funciona {
+      width: 100% !important;
+    }
+    &__funciona {
+      img {
+        display: none;
+      }
+    }
+  }
+}
