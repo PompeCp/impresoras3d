@@ -58,7 +58,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="container-info__sub">
-          <h1 className="container-info__sub__title">Herramientas 3D</h1>
+          <h1 className="container-info__sub__title">Tipos de impresoras 3D</h1>
         </div>
         <div className="center">
           <div className="container-info__impresoras" style={{}}>
