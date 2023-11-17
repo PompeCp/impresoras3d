@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 
 import { HomePage, DiseñoPage ,ConfiguracionPage, PosPage , ForosPage} from "./pages"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/prepdiseño" element={<DiseñoPage />}></Route>
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/foros" element={<ForosPage />}></Route>
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

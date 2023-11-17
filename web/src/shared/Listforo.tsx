@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { getForos } from "../servicios/index";
+import { getForos,api } from "../servicios/index";
 import axios from "axios";
 import fileDownload from "js-file-download";
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = api;
 const Listforo = () => {
   const [foro, setForo] = useState([]);
   useEffect(() => {
@@ -23,7 +23,7 @@ const Listforo = () => {
         <div key={item.id_comu} className="container-info__foro__item">
           <div className="container-info__foro__item__content"  >
             <p style={{ padding: "20px" }}>{item.nombre} </p>
-            <img alt="" src={"http://localhost:4000/upload/" + item.imagen} />
+            <img alt="" src={api+"upload/" + item.imagen} />
             <p style={{ textAlign: "left", padding: "20px" }}>
               {item.descripcion}
             </p>

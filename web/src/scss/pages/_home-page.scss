@@ -111,7 +111,7 @@
   }
 
   &__sub {
-    width: 50%;
+    width: 70%;
     height: 100px;
     background: $contenedor;
     border-top-right-radius: 15px;
@@ -122,13 +122,21 @@
 
     &__title {
       text-align: center;
-      font-size: clamp(1rem, 0.584rem + 2.377vw, 2.8125rem);
+      font-size: clamp(0.6875rem, 0.1556rem + 3.0392vw, 2.625rem);
       color: $secondary;
       width: calc(100%);
       position: relative;
       top: 25px;
     }
   }
+  @media (max-width: 580px) {
+    .container-info{
+       &__sub {
+        width:70%;
+       }
+    }
+  }
+  
 
   &__impresoras {
     margin-top: 2em;

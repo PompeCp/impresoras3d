@@ -44,7 +44,15 @@
   @media (max-width: 1316px) {
     .concepcon {
       &__par {
-        width: 100%;
+        font-size: clamp(0.8125rem, 0.6484rem + 0.9375vw, 1rem);
+        width: 90%;
+      }
+    }
+  }
+  @media (max-width: 670px) {
+    .concepcon {
+      &__par {
+        width: 80%;
       }
     }
   }

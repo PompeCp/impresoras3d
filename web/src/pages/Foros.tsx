@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { Navbar, Modal, Footer, Listforo } from "../shared";
 import Flor from "../assets/flor.png";
 import { useState } from "react";
-import { addForos } from "../servicios/index";
+import { addForos,api } from "../servicios/index";
+
 
 const Foros = () => {
   const [file, setFile] = useState(null);
   const selectedHandler = (e: any) => {
     //console.log(e.target.files[0]);
+    console.log(api);
     setFile(e.target.files[0]);
   };
 
@@ -55,7 +57,7 @@ const Foros = () => {
     formData.append("archivo", file);
     formData.append("archivo", file2);
 
-    fetch("http://localhost:4000/comunidad/images/post", {
+    fetch(api + "comunidad/images/post", {
       method: "POST",
       body: formData,
     })

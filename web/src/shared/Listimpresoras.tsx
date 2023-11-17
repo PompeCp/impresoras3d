@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getImpresoras } from "../servicios/index";
+import { getImpresoras,api } from "../servicios/index";
 
 const Listimpresoras = () => {
   const [impresoras, setImpresoras] = useState([]);
@@ -27,7 +27,7 @@ const Listimpresoras = () => {
         >
           <div className="container-info__impresoras__item__content">
             <p style={{ padding: "20px" }}>{item.nombre} </p>
-            <img alt="" src={"http://localhost:4000/upload/" + item.imagen} />
+            <img alt="" src={api+"upload/" + item.imagen} />
             <p style={{ textAlign: "left", padding: "20px" }}>
               {item.descripcion}
             </p>
