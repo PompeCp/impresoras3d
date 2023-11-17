@@ -30,7 +30,7 @@ const Pos = () => {
           <ReactPlayer
             height="100%"
             width="100%"
-            url="https://youtu.be/hbZfENZ4BhA"
+            url="https://youtu.be/uPJJjyjYUDc"
           />
         </div>
       </div>
@@ -63,14 +63,14 @@ const Pos = () => {
             completamente fria para ahcer esta limpieza para esto usaremos una
             espatula para retirar los residuos que quedan de la impresora
             pegados en la cama de impresion de manera suave sin dañar la
-            superficie de la cama acto seguido aplicaremos alcohol isoprofilico
-            en un paño para limpiar suavemente la superficie de la cama de
+            superficie de la cama acto seguido aplicaremos alcohol 
+            en un paño para limpiar  la superficie de la cama de
             impresion para eliminar cualquier residuo de ella
           </p>
           <ReactPlayer
             height="100%"
             width="100%"
-            url="https://youtu.be/hbZfENZ4BhA"
+            url="https://youtu.be/tWIMXRyY8Y4"
           />
           <p className="containerpos2__par2">
             En el caso de tener una impresora con una cama especial o diferente
