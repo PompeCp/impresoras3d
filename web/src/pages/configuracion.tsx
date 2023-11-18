@@ -45,7 +45,7 @@ const configuracion = () => {
           <ReactPlayer
             height="100%"
             width="100%"
-            url="https://youtu.be/hbZfENZ4BhA"
+            url="https://youtu.be/3IySg5j7KFo"
           />
         </div>
       </div>
