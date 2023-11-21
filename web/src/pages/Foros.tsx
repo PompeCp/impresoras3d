@@ -73,9 +73,10 @@ const Foros = () => {
   const submit = async (event: any) => {
     if (!file || !file2) {
       alert("Debes seleccionar un archivo");
+      event.preventDefault();
       return;
     }
-    event.preventDefault(); // evita que se recargue la página
+    event.preventDefault();
     await addForos(form);
     setModal1(!modal1);
     setFile(null);
@@ -106,7 +107,7 @@ const Foros = () => {
             showOverlay={true}
           >
             <Contenido>
-              <Formulario onSubmit={submit}>
+              <Formulario  onSubmit={submit}>
                 <span>Nombre</span>
                 <input
                   className="input-n"
