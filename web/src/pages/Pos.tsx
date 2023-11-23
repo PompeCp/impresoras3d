@@ -42,11 +42,11 @@ const Pos = () => {
       <div className=" herramienta__bg center ">
         <div className="herramienta__img  center ">
           <p>
-            en este video se explica cada uno de las herramientas basicas de
-            blender como lo son seleccionar, el cursos, mover, rotar,
-            redimencionar, transformar, anotaciones, medicion y el agregar cubos
-            ademas del uso de la camara los diferentes modos y modos del modo
-            edicion
+            Después de haber retirado la pieza podemos de la cama de impresión,
+            si tiene nuestra figura retiraremos los soportes de esta ejerciendo
+            un poco de fuerza, luego de retirar los soportes podemos proseguir a
+            realizar acabados estéticos como los que será mencionado a
+            continuación(esto es opcional ).
           </p>
           <img src={Acabados} className="herramienta__img__on" />
         </div>
@@ -63,9 +63,9 @@ const Pos = () => {
             completamente fria para ahcer esta limpieza para esto usaremos una
             espatula para retirar los residuos que quedan de la impresora
             pegados en la cama de impresion de manera suave sin dañar la
-            superficie de la cama acto seguido aplicaremos alcohol 
-            en un paño para limpiar  la superficie de la cama de
-            impresion para eliminar cualquier residuo de ella
+            superficie de la cama acto seguido aplicaremos alcohol en un paño
+            para limpiar la superficie de la cama de impresion para eliminar
+            cualquier residuo de ella
           </p>
           <ReactPlayer
             height="100%"
